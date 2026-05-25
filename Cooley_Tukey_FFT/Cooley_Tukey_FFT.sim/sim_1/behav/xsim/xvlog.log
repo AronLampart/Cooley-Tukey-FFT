@@ -10,4 +10,4 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/anonim/Desktop/gicio
 INFO: [VRFC 10-311] analyzing module twiddle_rom_beh
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sim_1/new/tb_fft_top_structural_beh.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb_fft_top_structural_beh
-WARNING: [VRFC 10-3824] variable 'rev_addr' must explicitly be declared as automatic or static [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sim_1/new/tb_fft_top_structural_beh.sv:61]
+WARNING: [VRFC 10-3824] variable 'rev_addr' must explicitly be declared as automatic or static [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sim_1/new/tb_fft_top_structural_beh.sv:60]

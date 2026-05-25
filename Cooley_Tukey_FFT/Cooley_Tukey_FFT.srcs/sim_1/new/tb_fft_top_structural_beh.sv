@@ -44,7 +44,6 @@ module tb_fft_top_structural_beh();
 
     initial begin
         $display("=== START SYMULACJI: BEHAWIORALNE FFT %0d-PUNKTOWE ===", N);
-        $display("UWAGA: Upewnij sie, ze plik 'twiddle_factors.mem' jest w folderze symulacji!\n");
 
         stage = 0;
         butterfly_idx = 0;
@@ -61,10 +60,10 @@ module tb_fft_top_structural_beh();
             int rev_addr = bit_reverse(i, STAGES);
             ext_addr = rev_addr;
             
-            if (i == 0) 
+            if (i%2) 
                 ext_din = {16'd1000, 16'd0}; 
             else        
-                ext_din = {16'd1000, 16'd0};//32'd0;             
+                ext_din = {16'd0, 16'd0};//32'd0;             
 
             ext_we = 1; #5;
             ext_we = 0; #5;
@@ -81,9 +80,11 @@ module tb_fft_top_structural_beh();
             $display(">> Uruchamianie Etapu %0d z %0d...", s, STAGES);
             for (int b = 0; b < (N/2); b++) begin
                 butterfly_idx = b;
-                compute_write_en = 1; 
-                $display("   [Etap %0d] Ostatni motylek (b=%0d), ROM_ADDR: %0d", s, b, dut.cu_inst.rom_addr);
+                #1;
+                compute_write_en = 1;
+                #1;
                 compute_write_en = 0; 
+                $display("   [Etap %0d] Motylek %0d, ROM_ADDR: %0d", s, b, dut.cu_inst.rom_addr);
             end
             $display("<< Etap %0d zakonczony.\n", s);
         end
