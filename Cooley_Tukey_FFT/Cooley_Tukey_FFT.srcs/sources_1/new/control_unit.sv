@@ -33,10 +33,10 @@ module control_unit #(
             element_in_group = '0;
             twiddle_step     = '0;
         end else begin
-            // half_step = 1 << (stage - 1)
+            // half_step = 2^(stage-1)
             half_step = 1'b1 << (stage - 1);
             
-            // Tworzymy maske bitowa do operacji modulo. 
+            // Maska bitowa do operacji modulo. 
             mask = half_step - 1'b1;
 
             // Element in group = butterfly_idx % half_step
@@ -45,7 +45,7 @@ module control_unit #(
             // Group idx = butterfly_idx / half_step
             group_idx = butterfly_idx >> (stage - 1);
 
-            // Twiddle step = N / (half_step * 2) -> czyli przesuniecie N o wartosc 'stage'
+            // Twiddle step = N / (half_step * 2)
             twiddle_step = (N >> stage);
         end
     end

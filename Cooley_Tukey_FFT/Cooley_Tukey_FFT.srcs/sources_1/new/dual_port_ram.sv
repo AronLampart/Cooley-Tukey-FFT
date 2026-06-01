@@ -1,23 +1,23 @@
 `timescale 1ns / 1ps
 
 module dual_port_ram #(
-    parameter int DATA_WIDTH = 32, // Dla FFT: 16 bitow Real + 16 bitow Imag
-    parameter int ADDR_WIDTH = 10  // 10 bitow dla N=1024, 4 bity dla N=16
+    parameter int DATA_WIDTH = 32,
+    parameter int ADDR_WIDTH = 10
 )(
     input  logic                    clk,
     input  logic                    rst_n, 
     
-    // --- PORT A ---
+    // PORT A
     input  logic                    wea,    // Zezwolenie na zapis portu A
     input  logic [ADDR_WIDTH-1:0]   addra,  // Adres portu A
     input  logic [DATA_WIDTH-1:0]   dina,   // Dane wejsciowe portu A
-    output logic [DATA_WIDTH-1:0]   douta,  // Dane wyjsciowe portu A (Zsynchronizowane!)
+    output logic [DATA_WIDTH-1:0]   douta,  // Dane wyjsciowe portu A
 
-    // --- PORT B ---
+    // PORT B
     input  logic                    web,    // Zezwolenie na zapis portu B
     input  logic [ADDR_WIDTH-1:0]   addrb,  // Adres portu B
     input  logic [DATA_WIDTH-1:0]   dinb,   // Dane wejsciowe portu B
-    output logic [DATA_WIDTH-1:0]   doutb   // Dane wyjsciowe portu B (Zsynchronizowane!)
+    output logic [DATA_WIDTH-1:0]   doutb   // Dane wyjsciowe portu B
 );
 
     // Tablica pamieci
@@ -47,7 +47,7 @@ module dual_port_ram #(
         end
     end
 
-    // Wyjscia z resetem synchronicznym - buforowanie czasowe
+    // Buforowanie
     always_ff @(posedge clk) begin
         if (!rst_n) begin
             douta <= '0;

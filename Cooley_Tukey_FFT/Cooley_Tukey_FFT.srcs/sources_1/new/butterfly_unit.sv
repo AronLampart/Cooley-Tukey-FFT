@@ -19,11 +19,11 @@ module butterfly_unit #(
     // Wartość do zaokrąglenia (0.5 w formacie stałoprzecinkowym)
     localparam logic signed [2*DATA_WIDTH-1:0] ROUND_VAL = (1 << (FRACT_BITS - 1));
 
-    //ETAP 1: Mnożenie (Dedykowane bloki DSP48)
+    //ETAP 1: Mnożenie
     logic signed [2*DATA_WIDTH-1:0] mult_br_wr, mult_bi_wi;
     logic signed [2*DATA_WIDTH-1:0] mult_br_wi, mult_bi_wr;
     
-    // Rejestry opóźniające dla kanału 'A' oraz sterowania (muszą iść równolegle z DSP)
+    // Rejestry opóźniające
     logic signed [DATA_WIDTH-1:0] a_real_r1, a_imag_r1;
     logic                         shift_enable_r1;
 
@@ -60,7 +60,7 @@ module butterfly_unit #(
             a_imag_r2       <= '0;
             shift_enable_r2 <= 1'b0;
         end else begin
-            // Dodajemy ROUND_VAL przed ucięciem bitów (Rounding zamiast Truncation)
+            // Dodajemy ROUND_VAL przed ucięciem bitów
             bw_real         <= (mult_br_wr - mult_bi_wi + ROUND_VAL) >>> FRACT_BITS;
             bw_imag         <= (mult_br_wi + mult_bi_wr + ROUND_VAL) >>> FRACT_BITS;
             a_real_r2       <= a_real_r1;
@@ -69,7 +69,7 @@ module butterfly_unit #(
         end
     end
 
-    //ETAP 3: Dodawanie/Odejmowanie motylkowe (Wyjście)
+    //ETAP 3: Dodawanie/Odejmowanie motylkowe
     always_ff @(posedge clk) begin
         if (!rst_n) begin
             sum_real  <= '0;

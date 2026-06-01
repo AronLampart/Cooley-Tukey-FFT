@@ -16,7 +16,7 @@ module fft_top #(
     // Interfejs do ladowania i rozladunku danych
     input  logic                         ext_we,            // Zapis z zewnatrz
     input  logic [$clog2(N)-1:0]         ext_addr,          // Zewnetrzny adres RAM
-    input  logic [2*DATA_WIDTH-1:0]      ext_din,           // Dane z zewnatrz {Real, Imag}
+    input  logic [2*DATA_WIDTH-1:0]      ext_din,           // Dane z zewnatrz
     output logic [2*DATA_WIDTH-1:0]      ext_dout           // Podglad danych z RAM
 );
 
@@ -34,7 +34,7 @@ module fft_top #(
     logic [2*DATA_WIDTH-1:0] final_dina,  final_dinb;
     logic                    final_wea,   final_web;
 
-    // Pipeline Alignment Registers
+    // Pipeline
     logic [$clog2(N)-1:0] delay_addr_a [0:4];
     logic [$clog2(N)-1:0] delay_addr_b [0:4];
     logic                 delay_we     [0:4];
@@ -52,7 +52,7 @@ module fft_top #(
             delay_addr_b[0] <= cu_ram_addr_b;
             delay_we[0]     <= compute_write_en;
 
-            // Stopnie 1 do 4: Przesuwanie w glab rurociagu
+            // Stopnie 1 do 4: Przesuwanie w glab pipeline
             for (int i = 1; i < 5; i++) begin
                 delay_addr_a[i] <= delay_addr_a[i-1];
                 delay_addr_b[i] <= delay_addr_b[i-1];

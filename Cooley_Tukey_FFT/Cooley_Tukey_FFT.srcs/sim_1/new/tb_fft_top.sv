@@ -25,7 +25,6 @@ module tb_fft_top();
     logic signed [DATA_WIDTH-1:0] out_real;
     logic signed [DATA_WIDTH-1:0] out_imag;
 
-    // Funkcja do odwracania bitow (Bit-Reversal) przy ladowaniu danych
     function automatic int bit_reverse(int val, int bits);
         int res = 0;
         for (int i = 0; i < bits; i++) begin
@@ -89,7 +88,7 @@ module tb_fft_top();
                 ext_din = {16'd0, 16'd0};     // Real = 0, Imag = 0             
 
             ext_we = 1; 
-            @(posedge clk); // Zapis nastepuje synchronicznie z zegarem BRAM
+            @(posedge clk);
             #1;
             ext_we = 0;
         end
@@ -105,10 +104,8 @@ module tb_fft_top();
             
             for (int b = 0; b < (N/2); b++) begin
                 butterfly_idx = b;
-                // 1. Czekamy na zbocze zegara, aby Control Unit wyliczyl i zatrzasnal adresy
                 @(posedge clk); 
                 #1;
-                // 2. Teraz, gdy adresy juz wedruja w rurociagu, wlaczamy sygnal zapisu
                 compute_write_en = 1;
                 
                 @(posedge clk);

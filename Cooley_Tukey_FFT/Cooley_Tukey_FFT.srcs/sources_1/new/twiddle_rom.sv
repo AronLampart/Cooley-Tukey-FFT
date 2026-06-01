@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 
 module twiddle_rom #(
-    parameter int DATA_WIDTH = 16, // Szerokosc jednej skladowej (Real/Imag)
-    parameter int N = 1024         // Liczba probek FFT
+    parameter int DATA_WIDTH = 16,
+    parameter int N = 1024
 )(
     input  logic                         clk,
     input  logic                         rst_n,
