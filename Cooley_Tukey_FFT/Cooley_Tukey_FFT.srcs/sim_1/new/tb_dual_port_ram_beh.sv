@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module tb_dual_port_ram();
+module tb_dual_port_ram_beh();
 
     localparam int DATA_WIDTH = 32;
     localparam int ADDR_WIDTH = 10;

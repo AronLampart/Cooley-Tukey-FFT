@@ -4,17 +4,11 @@ module fft_top_structural_beh #(
     parameter int N = 1024,
     parameter int DATA_WIDTH = 16
 )(
-    // =========================================================
-    // STEROWANIE Z ZEWNĘTRZNEGO TESTBENCHU (Zastępuje Zegar)
-    // =========================================================
     input  logic [$clog2($clog2(N)):0] stage,           // Obecny etap (0 = LOAD/UNLOAD, 1-10 = Obliczenia)
     input  logic [$clog2(N/2)-1:0]     butterfly_idx,   // Który motylek w etapie
     input  logic                       shift_enable,    // Skalowanie w motylku
     input  logic                       compute_write_en,// Zezwolenie na nadpisanie RAM wynikiem motylka
     
-    // =========================================================
-    // INTERFEJS DO RĘCZNEGO ŁADOWANIA DANYCH (Gdy stage == 0)
-    // =========================================================
     input  logic                       ext_we,          // Zezwolenie na zapis z zewnątrz
     input  logic [$clog2(N)-1:0]       ext_addr,        // Zewnętrzny adres RAM
     input  logic [2*DATA_WIDTH-1:0]    ext_din,         // Paczka danych z zewnątrz (Real + Imag)
@@ -38,8 +32,6 @@ module fft_top_structural_beh #(
     logic [$clog2(N)-1:0]    final_addra, final_addrb;
     logic [2*DATA_WIDTH-1:0] final_dina,  final_dinb;
     logic                    final_wea,   final_web;
-
-    //INSTANCJE MODUŁÓW
 
     control_unit_beh #(
         .N(N)
@@ -86,7 +78,7 @@ module fft_top_structural_beh #(
         .diff_real(diff_real), .diff_imag(diff_imag)
     );
 
-    // 3. LOGIKA
+    // LOGIKA
     always_comb begin
         if (stage == 0) begin
             //Faza ładowania

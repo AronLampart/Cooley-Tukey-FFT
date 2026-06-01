@@ -1,68 +1,39 @@
 Time resolution is 1 ps
 WARNING: Too many words specified in data file twiddle_factors.mem
-=== START SYMULACJI: BEHAWIORALNE FFT 16-PUNKTOWE ===
---- FAZA 1: Wczytywanie danych ---
-Dane zaladowane poprawnie.
-
+START SYMULACJI         16
+--- FAZA 1: Wczytywanie danych do Block RAM ---
+Dane zostaly zaladowane poprawnie.
 
 --- FAZA 2: Rozpoczecie obliczen Cooleya-Tukeya ---
 >> Uruchamianie Etapu 1 z 4...
-   [Etap 1] Motylek 0, ROM_ADDR: 0
-   [Etap 1] Motylek 1, ROM_ADDR: 0
-   [Etap 1] Motylek 2, ROM_ADDR: 0
-   [Etap 1] Motylek 3, ROM_ADDR: 0
-   [Etap 1] Motylek 4, ROM_ADDR: 0
-   [Etap 1] Motylek 5, ROM_ADDR: 0
-   [Etap 1] Motylek 6, ROM_ADDR: 0
-   [Etap 1] Motylek 7, ROM_ADDR: 0
+   Oczekiwanie na oproznienie rurociagu dla Etapu 1...
 << Etap 1 zakonczony.
 
 >> Uruchamianie Etapu 2 z 4...
-   [Etap 2] Motylek 0, ROM_ADDR: 0
-   [Etap 2] Motylek 1, ROM_ADDR: 4
-   [Etap 2] Motylek 2, ROM_ADDR: 0
-   [Etap 2] Motylek 3, ROM_ADDR: 4
-   [Etap 2] Motylek 4, ROM_ADDR: 0
-   [Etap 2] Motylek 5, ROM_ADDR: 4
-   [Etap 2] Motylek 6, ROM_ADDR: 0
-   [Etap 2] Motylek 7, ROM_ADDR: 4
+   Oczekiwanie na oproznienie rurociagu dla Etapu 2...
 << Etap 2 zakonczony.
 
 >> Uruchamianie Etapu 3 z 4...
-   [Etap 3] Motylek 0, ROM_ADDR: 0
-   [Etap 3] Motylek 1, ROM_ADDR: 2
-   [Etap 3] Motylek 2, ROM_ADDR: 4
-   [Etap 3] Motylek 3, ROM_ADDR: 6
-   [Etap 3] Motylek 4, ROM_ADDR: 0
-   [Etap 3] Motylek 5, ROM_ADDR: 2
-   [Etap 3] Motylek 6, ROM_ADDR: 4
-   [Etap 3] Motylek 7, ROM_ADDR: 6
+   Oczekiwanie na oproznienie rurociagu dla Etapu 3...
 << Etap 3 zakonczony.
 
 >> Uruchamianie Etapu 4 z 4...
-   [Etap 4] Motylek 0, ROM_ADDR: 0
-   [Etap 4] Motylek 1, ROM_ADDR: 1
-   [Etap 4] Motylek 2, ROM_ADDR: 2
-   [Etap 4] Motylek 3, ROM_ADDR: 3
-   [Etap 4] Motylek 4, ROM_ADDR: 4
-   [Etap 4] Motylek 5, ROM_ADDR: 5
-   [Etap 4] Motylek 6, ROM_ADDR: 6
-   [Etap 4] Motylek 7, ROM_ADDR: 7
+   Oczekiwanie na oproznienie rurociagu dla Etapu 4...
 << Etap 4 zakonczony.
 
 --- Obliczenia FFT zakonczone! ---
 
 --- FAZA 3: Weryfikacja widma ---
-Widmo [K=0] -> Real: 7992, Imag: 0
-Widmo [K=1] -> Real: 0, Imag: -4
-Widmo [K=2] -> Real: 0, Imag: -2
-Widmo [K=3] -> Real: 2, Imag: 0
-Widmo [K=4] -> Real: 0, Imag: -1
-Widmo [K=5] -> Real: 1, Imag: 0
-Widmo [K=6] -> Real: 1, Imag: 0
+Widmo [K=0] -> Real: 8000, Imag: 0
+Widmo [K=1] -> Real: 0, Imag: 0
+Widmo [K=2] -> Real: 0, Imag: 0
+Widmo [K=3] -> Real: 0, Imag: 0
+Widmo [K=4] -> Real: 0, Imag: 0
+Widmo [K=5] -> Real: 0, Imag: 0
+Widmo [K=6] -> Real: 0, Imag: 0
 Widmo [K=7] -> Real: 0, Imag: 0
-Widmo [K=8] -> Real: -7992, Imag: 0
-Widmo [K=9] -> Real: 0, Imag: 4
+Widmo [K=8] -> Real: -8000, Imag: 0
+Widmo [K=9] -> Real: 0, Imag: 0
 ...
 === KONIEC SYMULACJI ===
-$finish called at time : 354 ns : File "C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sim_1/new/tb_fft_top_structural_beh.sv" Line 110
+$finish called at time : 1256 ns : File "C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sim_1/new/tb_fft_top.sv" Line 146

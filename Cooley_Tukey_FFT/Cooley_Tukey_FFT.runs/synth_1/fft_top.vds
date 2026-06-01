@@ -1,0 +1,347 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Jun  1 15:23:32 2026
+# Process ID         : 18900
+# Current directory  : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1
+# Command line       : vivado.exe -log fft_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_top.tcl
+# Log file           : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1/fft_top.vds
+# Journal file       : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-9Q7A9CA
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+# CPU Frequency      : 3600 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34272 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36419 MB
+# Available Virtual  : 25902 MB
+#-----------------------------------------------------------
+source fft_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 534.035 ; gain = 221.770
+Command: synth_design -top fft_top -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17496
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1070.477 ; gain = 533.453
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'fft_top' [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/fft_top.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/control_unit.sv:3]
+	Parameter N bound to: 32'sb00000000000000000000010000000000 
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/control_unit.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'twiddle_rom' [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/twiddle_rom.sv:3]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter N bound to: 32'sb00000000000000000000010000000000 
+INFO: [Synth 8-3876] $readmem data file 'twiddle_factors.mem' is read successfully [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/twiddle_rom.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'twiddle_rom' (0#1) [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/twiddle_rom.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'dual_port_ram' [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/dual_port_ram.sv:3]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000100000 
+	Parameter ADDR_WIDTH bound to: 32'sb00000000000000000000000000001010 
+INFO: [Synth 8-6155] done synthesizing module 'dual_port_ram' (0#1) [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/dual_port_ram.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'butterfly_unit' [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/butterfly_unit.sv:3]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-6155] done synthesizing module 'butterfly_unit' (0#1) [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/butterfly_unit.sv:3]
+INFO: [Synth 8-6155] done synthesizing module 'fft_top' (0#1) [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/fft_top.sv:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1191.949 ; gain = 654.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.949 ; gain = 654.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.949 ; gain = 654.926
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3971] The signal "dual_port_ram:/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1191.949 ; gain = 654.926
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 2     
+	   3 Input   16 Bit       Adders := 2     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 5     
+	               16 Bit    Registers := 12    
+	               10 Bit    Registers := 12    
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              32K Bit	(1024 X 32 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element butterfly_inst/mult_bi_wr_reg was removed.  [C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.srcs/sources_1/new/butterfly_unit.sv:35]
+DSP Report: Generating DSP butterfly_inst/mult_br_wr_reg, operation Mode is: (A2*B2)'.
+DSP Report: register rom_inst/twiddle_real_reg is absorbed into DSP butterfly_inst/mult_br_wr_reg.
+DSP Report: register butterfly_inst/mult_br_wr_reg is absorbed into DSP butterfly_inst/mult_br_wr_reg.
+DSP Report: register butterfly_inst/mult_br_wr_reg is absorbed into DSP butterfly_inst/mult_br_wr_reg.
+DSP Report: operator butterfly_inst/mult_br_wr0 is absorbed into DSP butterfly_inst/mult_br_wr_reg.
+DSP Report: Generating DSP butterfly_inst/mult_bi_wi_reg, operation Mode is: (A*B2)'.
+DSP Report: register rom_inst/twiddle_imag_reg is absorbed into DSP butterfly_inst/mult_bi_wi_reg.
+DSP Report: register butterfly_inst/mult_bi_wi_reg is absorbed into DSP butterfly_inst/mult_bi_wi_reg.
+DSP Report: operator butterfly_inst/mult_bi_wi0 is absorbed into DSP butterfly_inst/mult_bi_wi_reg.
+DSP Report: Generating DSP butterfly_inst/bw_real1, operation Mode is: PCIN+A:B+(C:0x4000).
+DSP Report: operator butterfly_inst/bw_real1 is absorbed into DSP butterfly_inst/bw_real1.
+DSP Report: Generating DSP butterfly_inst/mult_bi_wr_reg, operation Mode is: (A*B2)'.
+DSP Report: register rom_inst/twiddle_real_reg is absorbed into DSP butterfly_inst/mult_bi_wr_reg.
+DSP Report: register butterfly_inst/mult_bi_wr_reg is absorbed into DSP butterfly_inst/mult_bi_wr_reg.
+DSP Report: operator butterfly_inst/mult_bi_wr0 is absorbed into DSP butterfly_inst/mult_bi_wr_reg.
+DSP Report: Generating DSP butterfly_inst/bw_imag1, operation Mode is: PCIN+(A2*B2)'.
+DSP Report: register rom_inst/twiddle_imag_reg is absorbed into DSP butterfly_inst/bw_imag1.
+DSP Report: register butterfly_inst/bw_imag1 is absorbed into DSP butterfly_inst/bw_imag1.
+DSP Report: register butterfly_inst/mult_br_wi_reg is absorbed into DSP butterfly_inst/bw_imag1.
+DSP Report: operator butterfly_inst/mult_br_wi0 is absorbed into DSP butterfly_inst/bw_imag1.
+DSP Report: operator butterfly_inst/bw_imag1 is absorbed into DSP butterfly_inst/bw_imag1.
+INFO: [Synth 8-3971] The signal "fft_top/ram_inst/ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1447.586 ; gain = 910.562
+---------------------------------------------------------------------------------
+ Sort Area is  butterfly_inst/mult_bi_wr_reg_5 : 0 0 : 1985 4077 : Used 1 time 0
+ Sort Area is  butterfly_inst/mult_bi_wr_reg_5 : 0 1 : 2092 4077 : Used 1 time 0
+ Sort Area is  butterfly_inst/mult_br_wr_reg_2 : 0 0 : 2000 2124 : Used 1 time 0
+ Sort Area is  butterfly_inst/mult_br_wr_reg_2 : 0 1 : 124 2124 : Used 1 time 0
+ Sort Area is  butterfly_inst/mult_bi_wi_reg_0 : 0 0 : 1985 1985 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++-------------+----------------------+---------------+----------------+
+|Module Name  | RTL Object           | Depth x Width | Implemented As | 
++-------------+----------------------+---------------+----------------+
+|control_unit | cu_inst/rom_addr_reg | 512x32        | Block RAM      | 
++-------------+----------------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|fft_top     | ram_inst/ram_reg | 1 K x 32(WRITE_FIRST)  | W | R | 1 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 1      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping         | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_top     | (A2*B2)'            | 16     | 16     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|fft_top     | (A*B2)'             | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|fft_top     | PCIN+A:B+(C:0x4000) | 13     | 18     | 16     | -      | -1     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|fft_top     | (A*B2)'             | 16     | 16     | -      | -      | 32     | 0    | 1    | -    | -    | -     | 1    | 0    | 
+|fft_top     | PCIN+(A2*B2)'       | 16     | 16     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++------------+---------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1447.586 ; gain = 910.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|fft_top     | ram_inst/ram_reg | 1 K x 32(WRITE_FIRST)  | W | R | 1 K x 32(WRITE_FIRST)  | W | R | Port A and B     | 0      | 1      | 
++------------+------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance ram_inst/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1447.586 ; gain = 910.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1659.391 ; gain = 1122.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1659.391 ; gain = 1122.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1659.391 ; gain = 1122.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1659.391 ; gain = 1122.367
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1660.375 ; gain = 1123.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1660.375 ; gain = 1123.352
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name               | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|fft_top     | delay_we_reg[4]        | 5      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|fft_top     | delay_addr_a_reg[4][9] | 5      | 10    | YES          | NO                 | YES               | 10     | 0       | 
+|fft_top     | delay_addr_b_reg[4][9] | 5      | 10    | YES          | NO                 | YES               | 10     | 0       | 
++------------+------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fft_top     | (A'*B')'      | 30     | 18     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fft_top     | (A'*B')'      | 30     | 18     | -      | -      | 32     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fft_top     | (PCIN+A:B+C)' | 30     | 18     | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|fft_top     | (A'*B')'      | 30     | 18     | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fft_top     | PCIN+(A'*B')' | 30     | 18     | -      | -      | 31     | 1    | 1    | -    | -    | -     | 1    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    59|
+|3     |DSP48E1  |     5|
+|4     |LUT1     |    33|
+|5     |LUT2     |   151|
+|6     |LUT3     |    46|
+|7     |LUT4     |    79|
+|8     |LUT5     |    21|
+|9     |LUT6     |    82|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |     1|
+|12    |SRL16E   |    21|
+|13    |FDRE     |   212|
+|14    |IBUF     |    61|
+|15    |OBUF     |    32|
++------+---------+------+
+
+Report Instance Areas: 
++------+-----------------+---------------+------+
+|      |Instance         |Module         |Cells |
++------+-----------------+---------------+------+
+|1     |top              |               |   805|
+|2     |  butterfly_inst |butterfly_unit |   481|
+|3     |  cu_inst        |control_unit   |   138|
+|4     |  ram_inst       |dual_port_ram  |     4|
++------+-----------------+---------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1660.375 ; gain = 1123.352
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1660.375 ; gain = 1123.352
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1660.375 ; gain = 1123.352
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1674.434 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 66 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1795.715 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ef29e241
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1795.715 ; gain = 1261.680
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1795.715 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1/fft_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file fft_top_utilization_synth.rpt -pb fft_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  1 15:24:07 2026...

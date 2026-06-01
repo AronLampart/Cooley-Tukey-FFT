@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Mon Jun  1 15:23:32 2026
+# Process ID         : 18900
+# Current directory  : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1
+# Command line       : vivado.exe -log fft_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source fft_top.tcl
+# Log file           : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1/fft_top.vds
+# Journal file       : C:/Users/anonim/Desktop/gicior/Cooley-Tukey-FFT/Cooley_Tukey_FFT/Cooley_Tukey_FFT.runs/synth_1\vivado.jou
+# Running On         : DESKTOP-9Q7A9CA
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 19045
+# Processor Detail   : Intel(R) Core(TM) i9-9900KF CPU @ 3.60GHz
+# CPU Frequency      : 3600 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 34272 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 36419 MB
+# Available Virtual  : 25902 MB
+#-----------------------------------------------------------
+source fft_top.tcl -notrace
